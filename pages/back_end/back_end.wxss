@@ -1,0 +1,23 @@
+.goods_carId_set {
+  border-bottom: 2rpx #edece8 solid;
+  padding-bottom: 15rpx ;
+  margin-bottom: 15rpx;
+}
+.newList-container {
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  height: 50rpx;
+  background-color: #edece8;
+}
+.newList-container .newList {
+  text-align: center;
+}
+
+.button_container{
+  display: flex;
+  float: left;
+}
+.button_container .update{
+    width:200rpx; 
+    padding-left: 50rpx;
+}

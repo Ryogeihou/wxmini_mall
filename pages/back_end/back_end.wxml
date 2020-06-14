@@ -1,0 +1,30 @@
+<view class="goods_carId_set"
+wx:for="{{list}}">
+<view class="item_title">id：{{item.rhid}}。{{item.title}}</view>
+<checkbox-group bindchange="checkboxChange" id="{{item.rhid}}">
+    <label class="checkbox" wx:for="{{items}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+  </checkbox-group>
+</view>
+
+
+<view class="newList-container">
+    
+
+  
+<view class="newList"
+wx:if="{{newList}}">
+    <view class="item_cat">"商品："{{newList}}"已经更新"</view>
+</view>
+
+</view>
+<view class="button_container">
+<button class="update" type="primary" bindtap="getList">update</button>
+<button class="update" type="primary" bindtap="reset">reset</button>
+<button class="update" type="primary" bindtap="goods_setting">goods_setting</button>
+</view> 
+
+
+<image mode="widthFix" src="https://oss.wandougongzhu.cn/e1a8abe33005a64a56317a995750267e.png?x-oss-process=image/resize,w_900,h_4000/format,png"></image>
+<image mode="widthFix" src="https://oss.wandougongzhu.cn/e1a8abe33005a64a56317a995750267e.png"></image>

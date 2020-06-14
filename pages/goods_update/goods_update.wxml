@@ -1,0 +1,107 @@
+<view class="button">
+  <button class="update" type="primary" bindtap="getOldList">get</button>
+  <button class="update" type="primary" bindtap="reset">reset</button>
+  <button class="update" type="primary" bindtap="update">set</button>
+  <view class="page-section">
+    <view class="weui-cells__title">input</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input
+        class="weui-input"
+        type="number"
+        bindblur="setInputtedRhid" 
+          
+        placeholder="请输入rhid" />
+      </view>
+    </view>
+  </view>
+</view> 
+
+<view class="newData">
+  <view class="content">rhid:{{list[0].rhid}} marketValue:{{list[0].marketValue}} *** {{list[0].title}} subHead:{{list[0].subHead}}
+  <view class=""> point:{{list[0].point}} </view></view>
+  <scroll-view scroll-left="{{scrollLeft}}" scroll-with-animation scroll-x  class="cat_container">
+    <view style="display: flex; flex-direction: row;">
+        <block wx:for="{{list[0].pics}}" wx:key="cat_id">
+            <view class="cat_item" data-index="{{index}}">
+                <view class="cat_image" >
+                    <image lazy-load="true" class="cat_icon" mode='widthFix' src="{{item}}"></image>
+                </view>
+            </view>
+        </block>
+    </view>
+  </scroll-view>
+  <scroll-view scroll-left="{{scrollLeft}}" scroll-with-animation scroll-x  class="cat_container">
+    <view style="display: flex; flex-direction: row;">
+        <block wx:for="{{list[0].introduce}}" wx:key="cat_id">
+            <view class="cat_item" data-index="{{index}}">
+                <view class="cat_image" >
+                    <image lazy-load="true" class="cat_icon" mode='widthFix' src="{{item}}"></image>
+                </view>
+            </view>
+        </block>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="next_old_data"></view>
+
+<view class="newData">
+  <view class="content">rhid:{{oldList[0].rhid}} marketValue:{{oldList[0].marketValue}} *** {{oldList[0].title}} subHead:{{oldList[0].subHead}}
+  <view class=""> point:{{oldList[0].point}}  price:{{oldList[0].price}}</view></view>
+  <scroll-view scroll-left="{{scrollLeft}}" scroll-with-animation scroll-x  class="cat_container">
+    <view style="display: flex; flex-direction: row;">
+        <block wx:for="{{oldList[0].pics}}" wx:key="cat_id">
+            <view class="cat_item" data-index="{{index}}">
+                <view class="cat_image" >
+                    <image lazy-load="true" class="cat_icon" mode='widthFix' src="{{item}}"></image>
+                </view>
+            </view>
+        </block>
+    </view>
+  </scroll-view>
+  <scroll-view scroll-left="{{scrollLeft}}" scroll-with-animation scroll-x  class="cat_container">
+    <view style="display: flex; flex-direction: row;">
+        <block wx:for="{{oldList[0].introduce}}" wx:key="cat_id">
+            <view class="cat_item" data-index="{{index}}">
+                <view class="cat_image" >
+                    <image lazy-load="true" class="cat_icon" mode='widthFix' src="{{item}}"></image>
+                </view>
+            </view>
+        </block>
+    </view>
+  </scroll-view>
+</view>
+
+<button class="update" type="primary" bindtap="getNotPicDB">getNotPicDB</button>
+
+
+
+
+		
+
+
+
+
+<!-- <view class="me">
+  <view class="button">
+    <button class="update" type="primary" bindtap="getList">get</button>
+    <button class="update" type="primary" bindtap="reset">reset</button>
+    <button class="update" type="primary" bindtap="goods_setting">set</button>
+  </view> 
+
+
+  <view class="new">
+    <view class="goods_item" wx:for="{{list}}" wx:key="key">
+      <view class="text">rhid:{{item.rhid}} ***{{item.title}}</view>
+      <view class="pics" wx:for="{{item.pics}}" wx:key="key">
+        <image class="img" src="{{item}}" mode="widthFix" lazy-load="true"/>
+      </view>
+      <view class="intro" wx:for="{{item.introduce}}" wx:key="key">
+        <image class="img" src="{{item}}" mode="widthFix" lazy-load="true"/>
+      </view>
+    </view>
+  </view>
+
+
+</view> -->

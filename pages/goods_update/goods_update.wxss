@@ -1,0 +1,34 @@
+.button {
+  width: 100%;
+  display: flex;
+  float: left;
+  margin-bottom: 50rpx;
+}
+.button .update {
+  width: 33%;
+}
+.newData .content {
+  padding: 30rpx 0;
+  border-bottom: 3rpx solid #666;
+}
+.newData .cat_container {
+  padding-bottom: 13rpx ;
+  border-bottom: 3rpx solid #666;
+}
+.newData .cat_container .cat_item {
+  margin-left: 20rpx;
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 5px;
+  border: 1.5rpx solid #edece8;
+  position: relative;
+  text-align: center;
+}
+.newData .cat_container .cat_item .cat_image .cat_icon {
+  width: 120rpx;
+}
+.next_old_data {
+  height: 50rpx;
+  background-color: #edece8;
+  width: 100%;
+}

@@ -1,0 +1,69 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail_swiper">
+    <swiper
+    autoplay
+    circular
+    indicator-dots
+    >
+        <swiper-item
+        wx:for="{{info.pics}}"
+        wx:key="key"
+        >
+        <image lazy-load="true" mode="heidthFix" src="{{item}}"></image>
+        </swiper-item>
+          
+    </swiper>
+</view>
+
+<view class="goods_price">¥{{info.price}}</view>
+<view class="goods_name_row">
+    <view class="goods_name">{{info.title}}{{info.subHead}}</view>
+    <view class="goods_collect" bindtap="handleCollect">
+        <text class="iconfont {{isCollect?'icon-shoucang-':'icon-shoucang'}}"></text>
+        <view class="collect_text">收藏</view>
+    </view>
+</view>
+
+<view class="goods_info">
+    <view class="goods_info_title">图文详情</view>
+    <view class="goods_info_content" wx:for="{{info.introduce}}"
+    wx:key="key">
+        <!-- 富文本 -->
+        <!-- {{info.introduce}} -->
+        <!-- <rich-text class="goods_introduce" nodes="{{info.introduce}}"> 
+        </rich-text> -->
+        <image class="item_image" mode="widthFix" lazy-load="true" src="{{item}}"></image>
+          
+    </view>
+</view>
+
+
+<view wx:for="{{info}}" wx:key="key" class="btm_tool">
+    <view class="tool_item">
+        <view class="iconfont icon-kefu"></view>
+        <view>客服</view>
+        <button open-type="contact"></button>
+    </view>
+    <view class="tool_item" id="{{info.rhid}}">
+        <view class="iconfont icon-fenxiangcopy"></view>
+        <view>分享</view>
+        <button open-type="share"></button>
+    </view>
+    
+    <!-- <navigator open-type="switchTab" url="/pages/cart/cart" class="tool_item">
+        <view class="iconfont icon-xiazai1"></view>
+        <view>购物车</view>
+    </navigator>
+    <view bindtap="handleCartAdd" data-item="{{info}}" class="tool_item btn_cart">
+        加入购物车
+    </view>
+    <view class="tool_item btn_buy">
+        立即购买
+    </view> -->
+</view>
+
+
+
+
+
+
