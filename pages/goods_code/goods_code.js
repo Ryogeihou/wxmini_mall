@@ -1,31 +1,39 @@
-// pages/goodsCode/goodsCode.js
 Page({
-
-  data: {
-    
+  data:{
+    id:0,
+    qrcode:"",
+    itempic:"",
   },
-
-  // aaa(){
-  //   const {
-  //     WXMINIUser,
-  //     WXMINIQR
-  // } = require('wx-js-utils');
-  
-  // const appId = 'wxf2bf6ec6395716fe'; // 小程序 appId
-  // const secret = 'e6e9e606709628be68f9733155fe3792'; // 小程序 secret
-  
-  // // 获取小程序码，A接口
-  // let wXMINIUser = new WXMINIUser({
-  //     appId,
-  //     secret
-  // });
-  
-  // // 一般需要先获取 access_token
-  // let access_token = await wXMINIUser.getAccessToken();
-  // let wXMINIQR = new WXMINIQR();
-  // },
-  
   onLoad: function (options) {
-    console.log(options)
+    this.setData({
+      id:options.id,
+      qrcode:options.qrcode,
+      itempic:options.itempic
+    })
   },
+  
+  onReady: function () {
+    var context = wx.createCanvasContext('canvas')
+
+    // const img = canvas.createImage()
+    // const qr = canvas.createImage()
+    // this.drawBall()
+    // this.interval = setInterval(this.drawBall, 17)
+    // const img = context.createImage()
+    // const qr = context.createImage()
+    // img.onload = () => {
+    //   this._img = img
+    // }
+    // qr.onload = () => {
+    //   this._qr = qr
+    // }
+    // img = '../pic/111.png',
+    // qr.src = './11 (2).png'
+    context.drawImage("", 0, 0, 300,300)
+    context.draw()
+
+  },
+  drawImg(){
+    console.log("hello world")
+  }
 })

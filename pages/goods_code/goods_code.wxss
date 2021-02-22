@@ -1,1 +1,8 @@
-/* pages/goodsCode/goodsCode.wxss */
+.page-body-wrapper{
+  margin-top: 100rpx;
+}
+.canvas {
+  width: 605rpx;
+  height: 1000rpx;
+  background-color: #000;
+}

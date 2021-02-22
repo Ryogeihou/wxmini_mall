@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "poster": "/miniprogram_dist/poster/index"
+  },
   "navigationBarTitleText":"宝贝详情"
 }

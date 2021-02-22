@@ -9,9 +9,9 @@ Page({
 
   // 登录
   getUserInfo: function (e) {
-    // if (wx.getStorageSync("userInfo") == []) {
+    if (wx.getStorageSync("userInfo") == []) {
       // 1 内存空的情况下请求服务器获取openid
-      // console.log("内存无数据")
+      console.log("内存无数据")
       wx.cloud.callFunction({
         name: 'login1',
         success: res => {
@@ -25,14 +25,14 @@ Page({
           });
         }
       })
-    // } else {
-      // console.log('aaaaa')
+    } else {
+
       // console.log("内存有数据")
 
-      // wx.navigateBack({
-      //   delta: 1
-      // });
-    // }
+      wx.navigateBack({
+        delta: 1
+      });
+    }
   },
   setDataBase(userInfo) {
     const userDBInfo = db.collection('userInfo')

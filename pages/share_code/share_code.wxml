@@ -1,2 +1,1 @@
-<!--pages/acode/acode.wxml-->
-<text>pages/acode/acode.wxml</text>
+<button bindtap="getQR">生成二维码</button>

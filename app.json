@@ -17,7 +17,8 @@
     "pages/goods_code/goods_code",
     "pages/share_code/share_code",
     "pages/brand/brand",
-    "pages/collect/collect"
+    "pages/collect/collect",
+    "pages/posterTest/posterTest"
   ],
   "window": {
     "backgroundTextStyle": "light",
